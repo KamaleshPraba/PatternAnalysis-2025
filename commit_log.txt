@@ -1,0 +1,17 @@
+467ff79 | 2025-10-31 | KamaleshPraba |  Updated README.md code
+ad921f7 | 2025-10-31 | KamaleshPraba |  umap.png code
+a8cb6ad | 2025-10-31 | KamaleshPraba |  image1.png code
+db32030 | 2025-10-31 | KamaleshPraba | Improved training script readability and visualization clarity
+415258c | 2025-10-31 | KamaleshPraba |  train.py code
+5caa1e3 | 2025-10-31 | KamaleshPraba |  modules.py code
+c8952b0 | 2025-10-31 | KamaleshPraba | Removed StableDiffusion-KamaleshPraba folder
+58a0ec9 | 2025-10-31 | KamaleshPraba | Removed oasis_unet_kamalesh folder
+2acf8d6 | 2025-10-31 | KamaleshPraba | train.py
+0d81d79 | 2025-10-31 | KamaleshPraba | results.py
+c14f543 | 2025-10-31 | KamaleshPraba | Added README file
+7f5f878 | 2025-10-31 | KamaleshPraba | Added predict.py, dataset.py, and oasis_unet_kamalesh folder
+51a99d4 | 2025-10-31 | KamaleshPraba | Added dataset.py to StableDiffusion-Kamalesh folder
+6ff6d6f | 2025-10-31 | KamaleshPraba | Committed files
+fe94a07 | 2025-09-22 | Shekhar S. Chandra | Added recognition branch for tasks
+e5f50ae | 2025-09-22 | Shekhar S. Chandra | Updated text in README
+798954e | 2025-09-21 | Shakes | Initial commit

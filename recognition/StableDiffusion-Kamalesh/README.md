@@ -54,6 +54,22 @@ UMAP Analysis: Real and generated embeddings showed partial overlap, indicating 
 Visual Inspection: The synthetic images demonstrated plausible anatomical structure and smooth intensity transitions with minimal artifacts.
 Computation Time: ~1.5 minutes for 10 samples on NVIDIA A100 GPU.
 
+| **Step**                    | **Action**                                         | **Details / Command**                                                                                                                   |
+| --------------------------- | -------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
+| **1. Environment Setup**    | Install required libraries.                        | `!pip install diffusers==0.30.0 transformers accelerate einops torch torchvision umap-learn scikit-learn matplotlib torchmetrics`       |
+| **2. Mount Drive**          | Mount Google Drive in Colab for dataset access.    | `python<br>from google.colab import drive<br>drive.mount('/content/drive')`                                                             |
+| **3. Dataset Verification** | Ensure OASIS dataset exists.                       | `/content/drive/MyDrive/OASIS/keras_png_slices_train`                                                                                   |
+| **4. Load Model**           | Initialize Stable Diffusion v1.5 pipeline.         | `pipe = StableDiffusionPipeline.from_pretrained("runwayml/stable-diffusion-v1-5")`                                                      |
+| **5. Image Generation**     | Generate synthetic MRI slices using text prompts.  | `python<br>prompt = "realistic MRI brain coronal slice..."<br>img = pipe(prompt, guidance_scale=7.0, num_inference_steps=25).images[0]` |
+| **6. Output Directory**     | Generated MRI images automatically saved to Drive. | `/content/drive/MyDrive/OASIS/generated_oasis/`                                                                                         |
+| **7. Visualization**        | Compare real vs. generated samples.                | `matplotlib` and `make_grid` for visualization                                                                                          |
+| **8. Evaluation**           | Compute metrics and feature comparison.            | - **SSIM:** Measures structural similarity<br>- **UMAP:** Visual overlap of embeddings                                                  |
+| **9. Runtime**              | Total execution time.                              | ~1–2 minutes for 10 images on A100 GPU                                                                                                  |
+
+
+
+
+
 LIBRARIES:
 
 diffusers==0.30.0
